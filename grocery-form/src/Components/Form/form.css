@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* overflow: hidden; */
+    overflow: scroll;
     height: 100vh;
     width: 100vw;
     background-image: url('../../Assets/Images/background.jpg');
@@ -12,12 +12,14 @@
 .logo img{
     border-radius: 50%;
     height: 200px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 .form-section{
-    height: 70vh;
-    /* padding: 20px 40px 20px 40px; */
-    width: 65vw;
+    width: 60vw;
+    border-radius: 0 0 6px 6px;
     background-color: #fff;
+    margin-bottom: 50px;
 }
 .form-section h1{
     padding: 20px 20px 40px 20px;
@@ -40,8 +42,11 @@
     margin-bottom: 6px;
 }
 .product-list li{
+    margin-right: 20px;
     list-style: none;
     display: flex;
+    border-bottom: 1px dashed lightgray;
+    padding: 16px;
 }
 .product-image-area{
     height: 72px;
@@ -67,7 +72,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0 0 0 16px;
-    padding-bottom: 34px;
+    padding-bottom: 22px;
 }
 .product-title{
     display: flex;
@@ -87,9 +92,69 @@
     opacity: 0.6;
 }
 .product-pricing{
-    top: 2px;
+    top: 10px;
     right: 40px;
     position: absolute;
     font-size: 14px;
     margin-left: 1px;
 }
+.product-quantity{
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.product-quantity select{
+    height: 35px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    background: none;
+    border-radius: 4px;
+    padding-right: 4px;
+}
+.item-total{
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: flex-end;
+   padding-left: 30px;
+   margin-top: 20px;
+}
+#t1{
+    -moz-tab-size: 16; /* Firefox */
+    tab-size: 16;
+}
+.quantity-label, .color-label{
+    opacity: 0.6;
+}
+.form-section-main{
+    display: flex !important;
+    flex-direction: column;
+    padding: 40px;
+}
+.form-section-main div{
+    width: 100%;
+}
+.order-button{
+    width: 100%;
+    justify-content: center;
+}
+.order-button button{
+    background-color: green !important;
+    width: 180px !important;
+    height: 48px !important;
+}
+.first-name{
+    width: calc(100% - 16px);
+ }
+ 
+@media screen and (max-width: 320px) {
+    .form-section{
+        width: 95vw;
+    }
+    .form-section h1{
+        font-size: 42px;
+    }
+    .search-section{
+        padding: 10px !important;
+    }
+} 
